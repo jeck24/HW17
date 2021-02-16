@@ -33,11 +33,11 @@ router.get("/api/workouts", (req, res) => {
 });
 
 router.get("/exercise", function(req,res){
-    res.status(202).sendFile(path.join(__dirname + './public/exercise.html'));
+    res.status(202).sendFile(path.join(__dirname + '/../public/exercise.html'));
 });
 
 router.get("/stats", function(req,res){
-    res.status(202).sendFile(path.join(__dirname + './public/stats.html'));
+    res.status(202).sendFile(path.join(__dirname + '/../public/stats.html'));
 });
 
 module.exports = router;
