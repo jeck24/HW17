@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const Activity = require("../models/activity.js");
+const Workout = require("../models/workout.js");
 const path = require('path');
 
-router.post("/api/activities/:id", ({ body }, res) => {
-  Activity.create(body)
+router.post("/api/workouts/:id", ({ body }, res) => {
+  Workout.create(body)
     .then(dbActivity => {
       res.json(dbActivity);
     })
@@ -12,8 +12,8 @@ router.post("/api/activities/:id", ({ body }, res) => {
     });
 });
 
-router.put("/api/activities/:id", ({ body }, res) => {
-  Activity.create(body)
+router.put("/api/workouts/:id", ({ body }, res) => {
+  Workout.create(body)
     .then(dbActivity => {
       res.json(dbActivity);
     })
@@ -22,8 +22,8 @@ router.put("/api/activities/:id", ({ body }, res) => {
     });
 });
 
-router.get("/api/activities", (req, res) => {
-  Activity.find({})
+router.get("/api/workouts", (req, res) => {
+  Workout.find({})
     .then(dbActivity => {
       res.json(dbActivity);
     })
